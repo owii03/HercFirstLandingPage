@@ -1,32 +1,50 @@
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/mobs.css">
 
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene arjs='debugUIEnabled: false; trackingMethod: best; sourceType: webcam;' vr-mode-ui="enabled: false">
-		<!--this is the object of AR that show uo. 
+		<!--this is the object of AR that show up. 
 			And if the position change, the object can move out of the 'box' range-->
+
+		<!--Tasha Marker-->
 		<a-marker preset='custom' type='pattern' url='https://raw.githubusercontent.com/owii03/ARtesting/master/patt/Tashamarker.patt'>
 			<a-text position="-1 1 -2.5" rotation="270 0 0" width="30" color="#801515" value="WE" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt">
 			</a-text>
 			<a-text position="-1.5 1 0.7" rotation="270 0 0" width="30" color="#801515" value="OMA" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
-			<a-entity gltf-model="url(https://raw.githubusercontent.com/owii03/ARtesting/master/assets/love_low_poly/scene.gltf)" position="0 1 0"
+			<!-- Older Animation
+				<a-entity gltf-model="url(https://raw.githubusercontent.com/owii03/ARtesting/master/assets/love_low_poly/scene.gltf)" position="0 1 0"
 			 rotation="0 0 360" scale="0.02 0.02 0.02">
 				<a-animation attribute="rotation" to="360 0 0" dur="4500" easing='linear' repeat="indefinite"></a-animation>
 			</a-entity>
-			<a-plane color="#000" width="1.1" height="1.2" rotation="270 0 0"></a-plane>
+-->
+			<a-entity gltf-model="url(https://raw.githubusercontent.com/owii03/ARtesting/master/assets/love_low_poly/scene.gltf)" position="0 1 0"
+			 rotation="90 180 0" scale="0.02 0.02 0.02">
+				<a-animation attribute="scale" to="0.025 0.025 0.02" dur="1000" easing='linear' repeat="indefinite" direction="alternate"></a-animation>
+			</a-entity>
 		</a-marker>
 
+
+		<!--Angel Marker-->
 		<a-marker preset='custom' type='pattern' url='https://raw.githubusercontent.com/owii03/ARtesting/master/patt/Angelmarker.patt'>
 			<a-text position="-1 1 -2.5" rotation="270 0 0" width="30" color="#801515" value="WE" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
 			<a-text position="-1.5 1 0.7" rotation="270 0 0" width="30" color="#801515" value="OMA" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
+			<!-- Older Animation
 			<a-entity gltf-model="url(https://raw.githubusercontent.com/owii03/ARtesting/master/assets/love_low_poly/scene.gltf)" position="1 1 0"
 			 rotation="90 180 0" scale="0.02 0.02 0.02">
 				<a-animation attribute="position" to="-1 1 0" direction="alternate" dur="1500" easing='linear' repeat="indefinite"></a-animation>
 			</a-entity>
-			<a-plane color="#000" width="1.1" height="1.2" rotation="270 0 0"></a-plane>
+-->
+			<a-entity gltf-model="url(https://raw.githubusercontent.com/owii03/ARtesting/master/assets/love_low_poly/scene.gltf)" position="0 1 0"
+			 rotation="90 180 0" scale="0.02 0.02 0.02">
+				<a-animation attribute="scale" to="0.025 0.025 0.02" dur="1000" easing='linear' repeat="indefinite" direction="alternate"></a-animation>
+			</a-entity>
 		</a-marker>
 
+
+		<!--Owii Marker-->
 		<a-marker preset='custom' type='pattern' url='https://raw.githubusercontent.com/owii03/ARtesting/master/patt/Oimarker.patt'>
 			<a-text position="-1 1 -2.5" rotation="270 0 0" width="30" color="#801515" value="WE" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
 			<a-text position="-1.5 1 0.5" rotation="270 0 0" width="30" color="#801515" value="OMA" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
@@ -34,8 +52,42 @@
 			 rotation="90 180 0" scale="0.02 0.02 0.02">
 				<a-animation attribute="scale" to="0.025 0.025 0.02" dur="1000" easing='linear' repeat="indefinite" direction="alternate"></a-animation>
 			</a-entity>
-			<a-plane color="#000" width="1.1" height="1.2" rotation="270 0 0"></a-plane>
 		</a-marker>
+
+
+		<!--Mama Marker-->
+		<a-marker preset='custom' type='pattern' url='https://raw.githubusercontent.com/owii03/ARtesting/master/patt/MomMarker.patt'>
+			<a-text position="-1 1 -2.5" rotation="270 0 0" width="30" color="#801515" value="WE" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
+			<a-text position="-1.5 1 0.5" rotation="270 0 0" width="30" color="#801515" value="OMA" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
+			<a-entity gltf-model="url(https://raw.githubusercontent.com/owii03/ARtesting/master/assets/love_low_poly/scene.gltf)" position="0 1 0"
+			 rotation="90 180 0" scale="0.02 0.02 0.02">
+				<a-animation attribute="scale" to="0.025 0.025 0.02" dur="1000" easing='linear' repeat="indefinite" direction="alternate"></a-animation>
+			</a-entity>
+		</a-marker>
+
+
+
+		<!--Karen Marker-->
+		<a-marker preset='custom' type='pattern' url='https://raw.githubusercontent.com/owii03/ARtesting/master/patt/KarenMarker.patt'>
+			<a-text position="-1 1 -2.5" rotation="270 0 0" width="30" color="#801515" value="WE" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
+			<a-text position="-1.5 1 0.5" rotation="270 0 0" width="30" color="#801515" value="OMA" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
+			<a-entity gltf-model="url(https://raw.githubusercontent.com/owii03/ARtesting/master/assets/love_low_poly/scene.gltf)" position="0 1 0"
+			 rotation="90 180 0" scale="0.02 0.02 0.02">
+				<a-animation attribute="scale" to="0.025 0.025 0.02" dur="1000" easing='linear' repeat="indefinite" direction="alternate"></a-animation>
+			</a-entity>
+		</a-marker>
+
+
+		<!--Eji Marker-->
+		<a-marker preset='custom' type='pattern' url='https://raw.githubusercontent.com/owii03/ARtesting/master/patt/EjiMarker.patt'>
+			<a-text position="-1 1 -2.5" rotation="270 0 0" width="30" color="#801515" value="WE" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
+			<a-text position="-1.5 1 0.5" rotation="270 0 0" width="30" color="#801515" value="OMA" font="https://cdn.aframe.io/fonts/Exo2Bold.fnt"></a-text>
+			<a-entity gltf-model="url(https://raw.githubusercontent.com/owii03/ARtesting/master/assets/love_low_poly/scene.gltf)" position="0 1 0"
+			 rotation="90 180 0" scale="0.02 0.02 0.02">
+				<a-animation attribute="scale" to="0.025 0.025 0.02" dur="1000" easing='linear' repeat="indefinite" direction="alternate"></a-animation>
+			</a-entity>
+		</a-marker>
+
 
 		<a-entity camera></a-entity>
 	</a-scene>
